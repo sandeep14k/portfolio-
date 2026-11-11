@@ -30,3 +30,9 @@ Project artwork is conceptual and not a screenshot of the live applications. Bui
 - https://github.com/sandeep14k/chinar_admin
 
 The site has no JavaScript runtime dependencies. Google Fonts is optional; system fallbacks are configured. Clipboard behavior requires a secure origin and includes a manual-copy fallback. Motion honors prefers-reduced-motion.
+
+## 3D experience
+
+`dist/scene.js` renders a lit ring sculpture with native WebGL, locally generated mesh geometry, perspective, and depth testing. Drag or use arrow keys to rotate; Home and Reset restore the view. Pause stops the automatic rotation. Reduced-motion preferences disable automatic motion, and rendering sleeps when the scene or browser tab is hidden. The original SVG remains the fallback when WebGL is unavailable. No external 3D runtime is required.
+
+Resume details are awaiting a user-provided document and have not been inferred.
