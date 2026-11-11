@@ -1,38 +1,32 @@
-# Sandeep — Portfolio
+# Sandeep Kumar Jha — Portfolio
 
-A responsive, buildless portfolio in `dist/` using HTML, CSS, and vanilla JavaScript.
+Responsive, buildless portfolio using HTML, CSS, vanilla JavaScript, and native WebGL.
 
 ## Preview
 
-From this directory, run `python3 -m http.server 4173 --directory dist`, then visit http://localhost:4173.
+Run `python3 -m http.server 4173 --directory dist` from this directory, then visit http://localhost:4173.
 
-## Edit
+## Content and editing
 
-- `dist/index.html`: page content and project artwork
-- `dist/style.css`: responsive styles, typography, motion
-- `dist/script.js`: project details, filters, copy interaction
-- `.openai/hosting.json`: Sites deployment configuration
+- `dist/index.html`: introduction, ten projects, six skill groups, experience, education, and contact links.
+- `dist/style.css`: responsive editorial layout, dimensional project cards, and reduced-motion styles.
+- `dist/script.js`: project details, category filters, and email copy with manual fallback.
+- `dist/scene.js`: interactive WebGL sculpture, drag/keyboard rotation, pause, reset, and SVG fallback.
+- `dist/Sandeep-Kumar-Jha-Resume.pdf`: original supplied resume, available through download links in the hero and contact section.
+- `.openai/hosting.json`: existing Sites identity and static deployment configuration.
 
-Project artwork is conceptual and not a screenshot of the live applications. Built projects and contributions are distinguished explicitly. Contact uses the verified GitHub account; no email address, employment history, or performance metrics are assumed. Mahavir Fashion has no verified public project URL yet.
+Resume content and repository links come from `230910_sandeep_kumar_jha_bs_eco.pdf` supplied in the parent workspace. Existing portfolio projects are retained. Technical project metrics are resume-reported results, not independently benchmarked. Project artwork is conceptual rather than product screenshots.
 
-## Design research
+Contact: sandeepkj23@iitk.ac.in. LinkedIn and GitHub links match the supplied resume. No phone number was supplied.
 
-- https://brittanychiang.com — readable hierarchy, clear project context, accessible interaction
-- https://www.adhamdannaway.com — distinct introduction and work-first navigation
-- https://www.creativebloq.com/portfolios/examples-712368 — editorial layouts and project-led presentation
+The site has no JavaScript runtime dependencies. Google Fonts is optional with system fallbacks. Clipboard copying requires a secure origin and provides a manual fallback. Motion respects reduced-motion preferences, and the 3D scene sleeps while hidden.
 
-## Project references
+## Validation
 
-- https://github.com/sandeep14k
-- https://elewin.in
-- https://onebrain.app
-- https://spo.iitk.ac.in
-- https://github.com/sandeep14k/chinar_admin
+Browser checks passed at widths 1440, 768, 390, and 320 pixels with no horizontal overflow or JavaScript errors. Verified project filtering, all four added technical project dialogs and repository links, six skill groups, PDF download and file signature, email clipboard, WebGL controls, and reduced motion. JavaScript syntax checks passed.
 
-The site has no JavaScript runtime dependencies. Google Fonts is optional; system fallbacks are configured. Clipboard behavior requires a secure origin and includes a manual-copy fallback. Motion honors prefers-reduced-motion.
+## GitHub Pages deployment
 
-## 3D experience
+Repository: https://github.com/sandeep14k/portfolio-
 
-`dist/scene.js` renders a lit ring sculpture with native WebGL, locally generated mesh geometry, perspective, and depth testing. Drag or use arrow keys to rotate; Home and Reset restore the view. Pause stops the automatic rotation. Reduced-motion preferences disable automatic motion, and rendering sleeps when the scene or browser tab is hidden. The original SVG remains the fallback when WebGL is unavailable. No external 3D runtime is required.
-
-Resume details are awaiting a user-provided document and have not been inferred.
+`.github/workflows/pages.yml` publishes `dist/` on pushes to `main` or manual workflow dispatch. In repository Settings → Pages, the source must be GitHub Actions. The old `.openai/hosting.json` is retained only as historical configuration and is not used by this deployment.
